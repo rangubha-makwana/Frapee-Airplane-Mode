@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Rent Due Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .notification {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .notification h2 {
+            text-align: center;
+            color: #333;
+        }
+        .notification p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .notification .info {
+            margin-bottom: 20px;
+        }
+        .notification .info span {
+            font-weight: bold;
+            color: #333;
+        }
+        .signature {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .signature p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .signature p.authorized {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification">
+        <h2>Upcoming Rent Due</h2>
+        <div class="info">
+            <p><span>Shop Name:</span> {{shop_name}}</p>
+            <p><span>Shop Number:</span> {{shop_number}}</p>
+            <p><span>Airport Name:</span> {{airport}}</p>
+            <p><span>Tenant Name:</span> {{tenant_name}}</p>
+            <p><span>Contract End Date:</span> {{frappe.utils.format_date(contract_end_date, "d MMMM, YYYY")}}</p>
+            <p><span>Rent Amount:</span> {{rent_amount}}</p>
+        </div>
+        <p>Dear {{tenant_name}},</p>
+        <p>This is to inform you that the rent for the {{shop_number}}-{{shop_number}}, for the date of {{frappe.utils.format_date(issue_date, "d MMMM, YYYY")}} , will be due.</p>
+        <p>Please make arrangements to collect the rent accordingly.</p>
+        <div class="signature">
+            <p>Frappe Airline</p>
+            <!-- <p class="authorized">Your Name (Landlord)</p> -->
+        </div>
+    </div>
+</body>
+</html>

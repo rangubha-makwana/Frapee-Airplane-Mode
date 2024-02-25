@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Payment Reminder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Rent Payment Reminder</h2>
+        </div>
+        <div class="content">
+            <p>Dear {{tenant_name}},</p>
+            <p>I'm reaching out to remind you of your outstanding rent payment for month of {{month}}. Despite our previous reminders, it appears we have yet to receive your payment.</p>
+            <p>We understand that unexpected circumstances can arise, making it challenging to meet financial obligations. If you're experiencing difficulties, please don't hesitate to reach out to discuss possible arrangements.</p>
+            <p>However, it's essential to address this matter promptly. If the outstanding amount remains unpaid within {{last_date}}, we may need to consider further action, including termination of your lease agreement.</p>
+            <p>We value your tenancy and hope to resolve this matter smoothly. Please ensure the outstanding rent payment is settled as soon as possible. If you have any questions or need assistance, feel free to contact us.</p>
+            <p>Thank you for your attention to this matter.</p>
+            <p>Best regards,</p>
+            <p>Frappe Airline<br></p>
+        </div>
+        <div class="footer">
+            <p>This is an automated message. Please do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+</html>

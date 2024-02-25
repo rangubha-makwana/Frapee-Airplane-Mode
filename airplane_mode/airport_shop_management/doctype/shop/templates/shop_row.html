@@ -1,0 +1,11 @@
+
+{% if doc.status=="Available" %}
+
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+	
+	<h4> Shop Name : {{doc.shop_name}} </h4>
+	<p> Shop Number : {{doc.shop_number}}</p>
+	<a href="{{ doc.route }}">View Shop Deatils </a>
+</div>
+{% endif %}
+<!-- this is a sample default list template -->
